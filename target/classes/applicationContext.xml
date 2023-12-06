@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    
+    <bean id="sb" class="com.arun.beans.SpringBoot"/>
+    
+    <bean id="java" class="com.arun.beans.Java"/>
+    
+    <bean id="hb" class="com.arun.beans.Hibernate"/>
+    
+   <!--  Target Class -->
+    <bean id="select" class="com.arun.beans.CourseSelection">
+    	
+    	<!-- Setter Injection -->
+    	<!-- You have Injected Java object to the Target Class -->
+    	<!-- <property ref="java" name="course"></property> -->
+    	
+    	<!-- Constructor Injection -->
+    	
+    	<constructor-arg ref="sb" name="course"></constructor-arg>
+    	
+    	
+    	
+    
+    </bean>
+
+</beans>
